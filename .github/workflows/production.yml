@@ -24,4 +24,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6.6.1
         env:
-          CYPRESS_BASE_URL: ${{ env.VERCEL_URL }}
+          CYPRESS_BASE_URL: 'https://www.yahoo.com'
