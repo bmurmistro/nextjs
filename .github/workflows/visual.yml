@@ -1,0 +1,17 @@
+name: Visual Tests
+
+on:
+  deployment_status:
+jobs:
+  run-visual:
+    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: debug
+        run: echo Testing URL ${{ github.event.deployment_status.environment_url }}
+      - name: Cypress run
+        uses: cypress-io/github-action@v6.6.1
+        env:
+          CYPRESS_BASE_URL: ${{ github.event.deployment_status.environment_url }}
