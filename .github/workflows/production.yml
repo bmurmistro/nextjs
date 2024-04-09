@@ -20,6 +20,7 @@ jobs:
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
       - name: Cypress run
+        run: echo "${{ steps.vercel_preview_url.outputs.vercel_preview_url }}"
         uses: cypress-io/github-action@v6.6.1
         env:
           CYPRESS_BASE_URL: ${{ steps.vercel_preview_url.outputs.vercel_preview_url }}
