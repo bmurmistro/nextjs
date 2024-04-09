@@ -1,5 +1,5 @@
 describe('Navigation', () => {
-  it('should navigate to the about page', () => {
+  it('should navigate to the nextjs page', () => {
     // Start from the index page
     cy.visit('/')
 
