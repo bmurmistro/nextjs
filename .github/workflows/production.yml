@@ -21,3 +21,5 @@ jobs:
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
       - name: Cypress run
         uses: cypress-io/github-action@v6.6.1
+        env:
+          CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
