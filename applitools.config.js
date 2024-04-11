@@ -4,7 +4,7 @@ module.exports = {
     // Add browsers with different viewports
     {width: 1024, height: 768, name: 'chrome'},
     iosDeviceInfo: {
-          deviceName: 'iPhone 15',
+          deviceName: 'iPhone 15'
     }
     //{width: 700, height: 500, name: 'firefox'},
     //{width: 1600, height: 1200, name: 'ie11'},
