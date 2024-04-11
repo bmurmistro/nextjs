@@ -2,7 +2,7 @@ describe('Navigation', () => {
   beforeEach(function() {
     cy.eyesOpen({
       appName: 'nextjs',
-      testName: this.currentTest.title,
+      testName: Cypress.currentTest.title
     })
   })
   afterEach(() => {
